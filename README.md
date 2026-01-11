@@ -1,2 +1,2 @@
-# prog-str-2E-JavierDiaz
+# prog-str-2E-Javier-Diaz
 Repositorio del cuatrimestre
