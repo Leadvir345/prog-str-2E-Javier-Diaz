@@ -13,7 +13,7 @@ public static double calcularFinal(double promedio, int asistencia) {
 
 
 public static String determinarEstado(double calificacionFinal, int asistencia, boolean entregoProyecto) {
-    if (asistencia < 8) {
+    if (asistencia < 80) {
         return "REPROBADO por asistencia";
     }
 
@@ -21,7 +21,7 @@ public static String determinarEstado(double calificacionFinal, int asistencia, 
         return "REPROBADO por proyecto";
     }
 
-    if (calificacionFinal >= 7) {
+    if (calificacionFinal >= 70) {
         return "APROBADO";
     } else {
         return "REPROBADO por calificación";
@@ -36,13 +36,13 @@ public static void main(String[] args) {
     String nombre = ServicioGrado.leerTextoNoVacio(sc, "Ingrese el nombre del alumno: ");
 
 
-    System.out.println("CALIFICACIONES PARCIALES (0-10):");
-    double parcial1 = ServicioGrado.leerDoubleEnRango(sc, "  Parcial 1: ", 0, 10);
-    double parcial2 = ServicioGrado.leerDoubleEnRango(sc, "  Parcial 2: ", 0, 10);
-    double parcial3 = ServicioGrado.leerDoubleEnRango(sc, "  Parcial 3: ", 0, 10);
+    System.out.println("CALIFICACIONES PARCIALES (0-100):");
+    double parcial1 = ServicioGrado.leerDoubleEnRango(sc, "  Parcial 1: ", 0, 100);
+    double parcial2 = ServicioGrado.leerDoubleEnRango(sc, "  Parcial 2: ", 0, 100);
+    double parcial3 = ServicioGrado.leerDoubleEnRango(sc, "  Parcial 3: ", 0, 100);
 
     System.out.println(" ASISTENCIA:");
-    int asistencia = ServicioGrado.leerIntEnRango(sc, "  Porcentaje de asistencia (0-10): ", 0, 10);
+    int asistencia = ServicioGrado.leerIntEnRango(sc, "  Porcentaje de asistencia (0-100): ", 0, 100);
 
 
     System.out.println(" PROYECTO:");
